@@ -17,9 +17,12 @@ Plugin Github Repo: https://github.com/gedaly/chuck-norris-facts
 Chuck Norris once wrote a terms & conditions statement. No lawyers survived.
 */
 
-// add a random message to a notice in the admin area
 add_action( 'admin_notices', 'gg_chuck_admin_notice' );
-
+/**
+ * Creates a notice, displays it in admin area
+ * @since 1.0.0
+ *
+ */
 function gg_chuck_admin_notice() {
     ?>
     <div class="notice notice-info is-dismissible" style="display:flex;align-items:center;">
@@ -29,7 +32,11 @@ function gg_chuck_admin_notice() {
     <?php
 }
 
-// Get a random fact from the API
+/**
+ * Get a random fact from the API
+ * @since 1.0.0
+ *
+ */
 function gg_chuck_get_quote() {
     $get_quote = file_get_contents('https://api.chucknorris.io/jokes/random');
     $get_result  = json_decode($get_quote);
