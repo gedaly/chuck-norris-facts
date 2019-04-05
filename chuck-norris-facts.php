@@ -26,7 +26,7 @@ add_action( 'admin_notices', 'gg_chuck_admin_notice' );
 function gg_chuck_admin_notice() {
     ?>
     <div class="notice notice-info is-dismissible" style="display:flex;align-items:center;">
-        <img src="<?php echo plugins_url( '/img/chuck-image.jpg', __FILE__ ); ?>" height="32px" width="32px" style="display:inline-block;padding-right:.7rem;">
+        <img src="<?php echo esc_url(plugins_url( '/img/chuck-image.jpg', __FILE__ )); ?>" height="32px" width="32px" style="display:inline-block;padding-right:.7rem;">
         <p><?php gg_chuck_get_quote() ?></p>
     </div>
     <?php
@@ -41,5 +41,5 @@ function gg_chuck_get_quote() {
     $get_quote = file_get_contents('https://api.chucknorris.io/jokes/random');
     $get_result  = json_decode($get_quote);
     $quote = $get_result->value;
-    echo $quote;
+    esc_html_e( $quote, 'chuck-norris-facts');
 }
