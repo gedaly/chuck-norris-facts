@@ -3,7 +3,7 @@
 /*
 Plugin Name: Chuck Norris Facts
 Description: Chuck Norris once created the best WordPress plugin ever. This isn't it, but we honor him and his awesomeness with a random facts that are 110% totally true.
-Version: 1.0.0
+Version: 1.0.1
 Author: Gedaly
 Author URI: https://geda.ly
 Plugin URI: https://github.com/gedaly/chuck-norris-facts
